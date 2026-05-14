@@ -237,4 +237,7 @@ No se ha realizado despliegue en cloud porque, según la aclaración del profeso
 
 ## Repositorio GitHub
 
-Repositorio GitHub: [Enlace al repositorio]
+Repositorio GitHub: 
+```link
+https://github.com/ntamajon/gnn-lipophilicity-mlops
+```
