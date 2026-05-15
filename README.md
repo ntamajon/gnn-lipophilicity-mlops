@@ -153,7 +153,7 @@ Se registran, entre otros, los siguientes elementos:
 
 - Nombre del modelo.
 - Número de fold.
--Semilla aleatoria.
+- Semilla aleatoria.
 - Batch size.
 - Learning rate.
 - Weight decay.
