@@ -5,11 +5,23 @@
 <img src="https://masterdeeplearning.etsisi.upm.es/wp-content/uploads/2024/09/LOGOTIPO-leyenda-color-JPG-p-1024x475.png" width="400px"/>
 
 
-## Autores
+# GNN Lipophilicity — MLOps Project
 
-- Nicolás David Tamajón Rivas
-- Aliss Maria Bejerano Kindelan
+| | |
+|---|---|
+| **Autores** | David Nicolás Tamajón Rivas <br> Aliss Maria Bejerano Kindelan |
+| **Modelo** | GraphSAGE |
+| **Dataset** | MoleculeNet — Lipophilicity |
 
+[![Python](https://img.shields.io/badge/Python-blue)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-red)](https://pytorch.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-green)](https://fastapi.tiangolo.com/)
+[![Docker](https://img.shields.io/badge/Docker-ready-blue)](https://www.docker.com/)
+
+</div>
+
+<div align="left">
+    
 ## Descripción del proyecto
 
 Este proyecto corresponde a la entrega final de la asignatura de MLOps del Máster en Deep Learning.
@@ -244,3 +256,4 @@ Repositorio GitHub:
 ```link
 https://github.com/ntamajon/gnn-lipophilicity-mlops
 ```
+</div>
