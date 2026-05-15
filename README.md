@@ -1,6 +1,9 @@
-# Proyecto MLOps - Predicción de Lipofilicidad Molecular con GNN
-Máster en Deep Learning.
-Universidad Politécnica de Madrid.
+<div align="center">
+
+<img src="https://masterdeeplearning.etsisi.upm.es/wp-content/uploads/2024/02/wallpaper-full-front-copia-4.png" width="100%"/>
+
+<img src="https://masterdeeplearning.etsisi.upm.es/wp-content/uploads/2024/09/LOGOTIPO-leyenda-color-JPG-p-1024x475.png" width="400px"/>
+
 
 ## Autores
 
