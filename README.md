@@ -74,9 +74,7 @@ RMSE - Root Mean Squared Error
 │       └── ci.yml
 ├── app/
 │   └── __init__.py
-├── data/
-│   ├── tournament/
-│   └── README.md
+├── data/tournament   
 ├── models/
 │   ├── sage_mean_model.pt
 │   └── training_metrics.json
