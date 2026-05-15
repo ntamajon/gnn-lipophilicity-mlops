@@ -6,7 +6,7 @@ import torch
 from sklearn.metrics import mean_squared_error
 
 
-def seed_everything(seed: int = 42) -> None:
+def seed_everything(seed: int = 45) -> None:
     """
     Fija semillas para reducir la aleatoriedad del experimento.
     Esto mejora la reproducibilidad, aunque en GPU puede seguir habiendo

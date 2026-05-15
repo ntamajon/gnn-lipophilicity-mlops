@@ -5,6 +5,16 @@ from src.config import DATA_DIR
 from src.dataset import TournamentDataset
 from src.predict import load_trained_model, predict_graph
 
+import logging 
+import time
+from datetime import datetime
+
+# añadimos logging
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s",
+)
+logger = logging.getLogger(__name__)
 
 # Creamos la aplicación FastAPI.
 app = FastAPI(
@@ -58,34 +68,35 @@ def health():
         "dataset_size": len(dataset),
     }
 
-
 @app.post("/predict-by-index")
-def predict_by_index(request: PredictByIndexRequest):
-    """
-    Predice la lipofilicidad de una molécula usando un índice del dataset procesado.
+def predict_by_index(request: PredictByIndexRequest):    
+    start_time = time.time()
+    logger.info(f"INPUT | index={request.index}")
 
-    Este endpoint sirve para validar el flujo de inferencia:
-    input JSON -> carga del grafo -> predicción del modelo -> respuesta JSON.
-    """
-
-    index = request.index
-
-    if index >= len(dataset):
+    if request.index >= len(dataset):
+        logger.error(f"ERROR | index={request.index} fuera de rango | dataset_size={len(dataset)}")
         raise HTTPException(
             status_code=400,
-            detail=f"Index {index} is out of range. Dataset size is {len(dataset)}.",
+            detail=f"Index {request.index} is out of range. Dataset size is {len(dataset)}.",
         )
+        
+     """
+     Predice la lipofilicidad de una molécula usando un índice del dataset procesado.
+     Este endpoint sirve para validar el flujo de inferencia:
+     input JSON -> carga del grafo -> predicción del modelo -> respuesta JSON.
+     """  
 
-    graph = dataset[index]
+    graph = dataset[request.index]
+    prediction = predict_graph(model=model, graph=graph, device=device)
+    latency = round(time.time() - start_time, 4)
 
-    prediction = predict_graph(
-        model=model,
-        graph=graph,
-        device=device,
-    )
+    if not (-1.5 <= prediction <= 4.5):
+        logger.warning(f"OUTPUT SOSPECHOSO | index={request.index} | prediction={prediction:.4f}")
+    else:
+        logger.info(f"OUTPUT | index={request.index} | prediction={prediction:.4f} | latency={latency}s")
 
     return {
-        "index": index,
+        "index": request.index,
         "prediction": prediction,
         "target": "lipophilicity",
         "model_name": checkpoint["model_name"],
