@@ -69,7 +69,12 @@ def health():
     }
 
 @app.post("/predict-by-index")
-def predict_by_index(request: PredictByIndexRequest):    
+def predict_by_index(request: PredictByIndexRequest):
+    """
+    Predice la lipofilicidad de una molécula usando un índice del dataset procesado.
+    Este endpoint sirve para validar el flujo de inferencia:
+    input JSON -> carga del grafo -> predicción del modelo -> respuesta JSON.
+    """
     start_time = time.time()
     logger.info(f"INPUT | index={request.index}")
 
@@ -80,12 +85,6 @@ def predict_by_index(request: PredictByIndexRequest):
             detail=f"Index {request.index} is out of range. Dataset size is {len(dataset)}.",
         )
         
-     """
-     Predice la lipofilicidad de una molécula usando un índice del dataset procesado.
-     Este endpoint sirve para validar el flujo de inferencia:
-     input JSON -> carga del grafo -> predicción del modelo -> respuesta JSON.
-     """  
-
     graph = dataset[request.index]
     prediction = predict_graph(model=model, graph=graph, device=device)
     latency = round(time.time() - start_time, 4)
