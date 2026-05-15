@@ -142,7 +142,7 @@ Se registran, entre otros, los siguientes elementos:
 
 Enlace al proyecto o report de W&B: 
 ```link
-https://wandb.ai/ntamajon-universidad-polit-cnica-de-madrid/gnn-lipophilicity-mlops/reports/MLOps-GNN-Lipophilicity-Experiment-Report--VmlldzoxNjg4NDMwNw
+https://wandb.ai/ntamajon-universidad-polit-cnica-de-madrid/gnn-lipophilicity-mlops/reports/MLOps-GNN-Lipophilicity-Experiment-Report--VmlldzoxNjg4NDMwNw?accessToken=agpkl2vfcs2jlcx18vgplzenflnf6vlbl9vgdp8auorcovq7pasaci8ezky1wot1
 ```
 
 ## Inferencia local
