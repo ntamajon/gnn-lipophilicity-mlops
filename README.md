@@ -66,6 +66,8 @@ RMSE - Root Mean Squared Error
 ```
 
 ## Estructura del repositorio
+
+```text
 .
 ├── Dockerfile
 ├── README.md
@@ -98,7 +100,7 @@ RMSE - Root Mean Squared Error
     ├── test_model.py
     ├── test_predict.py
     └── test_api.py
-
+```
 
 ## Configuración del entorno local
 
