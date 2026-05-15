@@ -69,37 +69,34 @@ RMSE - Root Mean Squared Error
 
 ```text
 .
-├── Dockerfile
-├── README.md
-├── requirements.txt
-├── pytest.ini
-├── .dockerignore
-├── .gitignore
-│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── app/
+│   └── __init__.py
 ├── data/
-│   └── ...
-│
+│   ├── tournament/
+│   └── README.md
 ├── models/
-│   └── sage_mean_model.pt
-│
+│   ├── sage_mean_model.pt
+│   └── training_metrics.json
 ├── notebooks/
-│   └── PRACTICA_GNN_Lipophilicity.ipynb
-│
+│   └── PRACTICA_ALISS_BEJERANO_AND_DAVID_TAMAJON_GNN_2025.ipynb
 ├── src/
 │   ├── __init__.py
+│   ├── api_inferencia.py
 │   ├── config.py
 │   ├── dataset.py
 │   ├── models.py
-│   ├── train.py
 │   ├── predict.py
-│   ├── api_inferencia.py
+│   ├── train.py
 │   └── utils.py
-│
-└── tests/
-    ├── test_dataset.py
-    ├── test_model.py
-    ├── test_predict.py
-    └── test_api.py
+├── tests/
+├── .dockerignore
+├── .gitignore
+├── Dockerfile
+├── pytest.ini
+└── requirements.txt
 ```
 
 ## Configuración del entorno local
