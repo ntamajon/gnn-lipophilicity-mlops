@@ -69,38 +69,41 @@ RMSE - Root Mean Squared Error
 ```
 
 ## Estructura del repositorio
-.
-├── Dockerfile
-├── README.md
-├── requirements.txt
-├── pytest.ini
-├── .dockerignore
-├── .gitignore
-│
+
+```text
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+├── app/
+│   └── __init__.py
 ├── data/
-│   └── ...
-│
+│   ├── tournament/
 ├── models/
-│   └── sage_mean_model.pt
-│
+│   ├── sage_mean_model.pt
+│   └── training_metrics.json
 ├── notebooks/
-│   └── PRACTICA_GNN_Lipophilicity.ipynb
-│
+│   └── PRACTICA_ALISS_BEJERANO_AND_DAVID_TAMAJON_GNN_2025.ipynb
 ├── src/
 │   ├── __init__.py
+│   ├── api_inferencia.py
 │   ├── config.py
 │   ├── dataset.py
 │   ├── models.py
-│   ├── train.py
 │   ├── predict.py
-│   ├── api_inferencia.py
+│   ├── train.py
 │   └── utils.py
-│
-└── tests/
-    ├── test_dataset.py
-    ├── test_model.py
-    ├── test_predict.py
-    └── test_api.py
+├── tests/
+│   ├── test_dataset.py
+│   ├── test_model.py
+│   ├── test_predict.py
+│   └── test_api.py
+├── .dockerignore
+├── .gitignore
+├── Dockerfile
+├── README.md
+├── pytest.ini
+└── requirements.txt
+```
 
 
 ## Configuración del entorno local
@@ -160,7 +163,7 @@ Se registran, entre otros, los siguientes elementos:
 
 Enlace al proyecto o report de W&B: 
 ```link
-https://wandb.ai/ntamajon-universidad-polit-cnica-de-madrid/gnn-lipophilicity-mlops/reports/MLOps-GNN-Lipophilicity-Experiment-Report--VmlldzoxNjg4NDMwNw?accessToken=agpkl2vfcs2jlcx18vgplzenflnf6vlbl9vgdp8auorcovq7pasaci8ezky1wot1
+https://api.wandb.ai/links/ntamajon-universidad-polit-cnica-de-madrid/zegbl347
 ```
 
 ## Inferencia local
